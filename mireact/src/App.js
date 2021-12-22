@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header'
+import Footer from "./Footer"
+import Main from './Main'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    const titulo = "E-Commerce"
+    const footerData = {
+        copyright : "Copyright © 2021",
+        author : "Juan Pablo"
+    }
+    const home_titulo = "Home"
+    const array = ["uno","dos","tres"]
+
+    return (
+        <>
+            <Header titulo={titulo}  links={array}/>
+            <Main titulo={home_titulo}/>
+            <Footer data={footerData} links={array}/>
+        </>
+    )
 }
 
 export default App;
